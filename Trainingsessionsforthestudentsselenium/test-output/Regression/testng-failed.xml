@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="6" parallel="tests" name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
+  <parameter name="uri" value="https://www.facebook.com"/>
+  <test thread-count="6" parallel="tests" name="loginto(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="CreateAnAccount"/>
+          <include name="Ibrowsers"/>
+          <include name="f"/>
+        </methods>
+      </class> <!-- com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon -->
+      <class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="f"/>
+          <include name="Ibrowsers"/>
+          <include name="CreateAnAccount"/>
+        </methods>
+      </class> <!-- com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh -->
+    </classes>
+  </test> <!-- loginto(failed) -->
+  <test thread-count="6" parallel="tests" name="login(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="CreateAnAccount"/>
+          <include name="Ibrowsers"/>
+          <include name="f"/>
+        </methods>
+      </class> <!-- com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon -->
+      <class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="f"/>
+          <include name="Ibrowsers"/>
+          <include name="CreateAnAccount"/>
+        </methods>
+      </class> <!-- com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh -->
+    </classes>
+  </test> <!-- login(failed) -->
+</suite> <!-- Failed suite [Regression] -->

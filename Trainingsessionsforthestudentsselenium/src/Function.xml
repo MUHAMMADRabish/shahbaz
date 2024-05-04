@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" thread-count="6">
+
+<parameter name="uri" value="https://www.facebook.com"></parameter>
+<test name="login">
+<parameter name="browser" value="Chrome"></parameter>
+<classes>
+<class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh"></class>
+<class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon"></class>
+</classes>
+</test>
+<test name="loginto">
+<parameter name="browser" value="Edge"></parameter>
+<classes>
+<class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Signkh"></class>
+<class name="com.protratiningtech.org.Trainingsessionsforthestudentsselenium.Amazon"></class>
+</classes>
+</test>
+</suite>
