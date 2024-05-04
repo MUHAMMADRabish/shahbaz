@@ -23,12 +23,13 @@ public class Utility {
   @BeforeMethod
   @Parameters({"browser","uri"})
   public void Ibrowsers(String browser,String website) {
+	  String folders=System.getProperty("user.dir");
 	  if(browser.equalsIgnoreCase("Chrome")) {
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\MUHAMMAD Shahbaz Sal\\Downloads\\CodingOfWeekend-20210410T031739Z-001\\CodingOfWeekend9th\\Trainingsessionsforthestudentsselenium\\Drivers\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", folders+"\\Drivers\\chromedriver.exe");
 				driver=new ChromeDriver();
 		  
 	  }else if(browser.equalsIgnoreCase("Edge")) {
-		  System.setProperty("webdriver.edge.driver", "C:\\Users\\MUHAMMAD Shahbaz Sal\\Downloads\\CodingOfWeekend-20210410T031739Z-001\\CodingOfWeekend9th\\Trainingsessionsforthestudentsselenium\\Drivers\\msedgedriver.exe");
+		  System.setProperty("webdriver.edge.driver", folders+"\\Drivers\\msedgedriver.exe");
 		  driver=new EdgeDriver();
 		  
 	  }else {
@@ -44,13 +45,15 @@ public class Utility {
   
   
 	  public void shots() throws IOException {
+		  String folders=System.getProperty("user.dir");
+			 //
 		  Date sessio=new Date();
 		  System.out.println(sessio);
 		 String kj= sessio.toString().replace(" ", "_").replace(":", "_");
 		
 		 System.out.println(kj);
 		File output=  ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(output, new File("C:\\Users\\MUHAMMAD Shahbaz Sal\\Downloads\\CodingOfWeekend-20210410T031739Z-001\\CodingOfWeekend9th\\Trainingsessionsforthestudentsselenium\\Pictures\\"+kj+"pictures.png"));
+		FileHandler.copy(output, new File(folders+"\\Pictures\\"+kj+"pictures.png"));
 		
 	  }
 
